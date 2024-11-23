@@ -1,0 +1,30 @@
+ <h1>My Cool Website</h1>
+        <p>I think HTML is neat!</p>
+
+        <img src="https://www.lectura-specs.com/models/renamed/orig/rigid-dump-truck-777-g-caterpillar.jpg">
+
+        <blockquote>“Be yourself; everyone else is already taken.”― Oscar Wilde" - Yogi Berra</blockquote>
+        <button onclick="changeQuote()">Change Quote</button>
+
+        <script>
+            var index = 0;
+
+            function changeQuote() {
+                var quotes = [
+                    `"Every cat possesses a charm. Do not judge a cat by its color.”~ Hippolyte Taine"`,
+                    `"I am enjoying my time at Hammer Hacks!" - Nafeesa Asmi Elamkulam`,
+                    `“You only live once, but if you do it right, once is enough.”― Mae West`,
+                    `“Be yourself; everyone else is already taken.” ― Oscar Wilde`
+                ];
+
+                var blockquote = document.querySelector("blockquote");
+                blockquote.innerHTML = quotes[index];
+
+                index++;
+                if (index >= 4) {
+                    index = 0;
+                }
+            }
+        </script>
+    </body>
+</html>
